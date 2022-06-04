@@ -64,8 +64,8 @@ const sortAscending = (data) => {
       resultNamaAsc[i] = nama[i];
   }
 
-  console.log(resultNamaAsc);
-  // return resultNamaAsc;
+  // console.log(resultNamaAsc);
+  return resultNamaAsc;
 }
 
 const sortDescending = (data) => {
@@ -81,8 +81,8 @@ const sortDescending = (data) => {
       resultNamaDesc[i] = nama[i];
   }
 
-  console.log(resultNamaDesc);
-  // return resultNamaDesc;
+  // console.log(resultNamaDesc);
+  return resultNamaDesc;
 }
 
 // console.log(sorter(names, sortAscending));
