@@ -27,27 +27,27 @@ const sorter = (data, langkahSelanjutnya) => {
 
   if(langkahSelanjutnya == sortAscending)
   {
-    hasilSortir = langkahSelanjutnya(data.sort());
-    // hasilSortir = langkahSelanjutnya(data);
+    // hasilSortir = langkahSelanjutnya(data.sort());
+    hasilSortir = langkahSelanjutnya(data);
     // hasilSortir = hasilSortir.reverse();
     // hasilSortir = hasilSortir.sort();
     
-  // return hasilSortir;
+  return hasilSortir;
 
   }
 
   // else if(langkahSelanjutnya == sortDescending)
   else
   {
-    hasilSortir = langkahSelanjutnya(data.reverse());
-    // hasilSortir = langkahSelanjutnya(data);
+    // hasilSortir = langkahSelanjutnya(data.reverse());
+    hasilSortir = langkahSelanjutnya(data);
     // hasilSortir = hasilSortir.sort();
     // hasilSortir = hasilSortir.reverse();
-  // return hasilSortir;
+  return hasilSortir;
 
   }
 
-  return resultNamaSorter;
+  // return hasilSortir;
 }
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
@@ -65,9 +65,7 @@ const sortAscending = (data) => {
       resultNamaAsc[i] = nama[i];
   }
 
-  // console.log(resultNamaAsc);
-  resultNamaAsc = resultNamaAsc.sort();
-  return resultNamaAsc.reverse();
+  return resultNamaAsc = resultNamaAsc.sort();
 }
 
 const sortDescending = (data) => {
@@ -86,10 +84,13 @@ const sortDescending = (data) => {
   // console.log(resultNamaDesc);
   // return resultNamaDesc.reverse();
   // return resultNamaDesc.sort();
-
+  resultNamaDesc = resultNamaDesc.sort();
   return resultNamaDesc.reverse();
-  // return resultNamaDesc.sort();
+
 }
+
+// console.log(sortDescending(names));
+// console.log(sortAscending(names));
 
 // console.log(sorter(names, sortAscending));
 // // console.log(sorter(names, sortAscending));
