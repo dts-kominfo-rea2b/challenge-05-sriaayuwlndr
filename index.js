@@ -27,8 +27,8 @@ const sorter = (data, langkahSelanjutnya) => {
 
   if(langkahSelanjutnya == sortAscending)
   {
-    hasilSortir = langkahSelanjutnya(data.sort());
-    // hasilSortir = langkahSelanjutnya(data);
+    // hasilSortir = langkahSelanjutnya(data.sort());
+    hasilSortir = langkahSelanjutnya(data);
     // hasilSortir = hasilSortir.reverse();
     // hasilSortir = hasilSortir.sort();
     
@@ -38,8 +38,8 @@ const sorter = (data, langkahSelanjutnya) => {
 
   else if(langkahSelanjutnya == sortDescending)
   {
-    hasilSortir = langkahSelanjutnya(data.reverse());
-    // hasilSortir = langkahSelanjutnya(data);
+    // hasilSortir = langkahSelanjutnya(data.reverse());
+    hasilSortir = langkahSelanjutnya(data);
     // hasilSortir = hasilSortir.sort();
     // hasilSortir = hasilSortir.reverse();
   // return hasilSortir;
@@ -65,7 +65,8 @@ const sortAscending = (data) => {
   }
 
   // console.log(resultNamaAsc);
-  return resultNamaAsc;
+  resultNamaAsc = resultNamaAsc.sort();
+  return resultNamaAsc.reverse();
 }
 
 const sortDescending = (data) => {
@@ -82,7 +83,11 @@ const sortDescending = (data) => {
   }
 
   // console.log(resultNamaDesc);
-  return resultNamaDesc;
+  // return resultNamaDesc.reverse();
+  // return resultNamaDesc.sort();
+
+  resultNamaDesc = resultNamaDesc.reverse();
+  return resultNamaDesc.sort();
 }
 
 // console.log(sorter(names, sortAscending));
