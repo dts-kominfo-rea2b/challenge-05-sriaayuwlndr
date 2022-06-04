@@ -29,10 +29,10 @@ const sorter = (data, langkahSelanjutnya) => {
   {
     // hasilSortir = langkahSelanjutnya(data.sort());
     hasilSortir = langkahSelanjutnya(data);
-    // hasilSortir = hasilSortir.reverse();
-    // hasilSortir = hasilSortir.sort();
+    hasilSortir = hasilSortir.reverse();
+    hasilSortir = hasilSortir.sort();
     
-  return hasilSortir.reverse();
+    return hasilSortir;
 
   }
 
@@ -41,10 +41,9 @@ const sorter = (data, langkahSelanjutnya) => {
   {
     // hasilSortir = langkahSelanjutnya(data.reverse());
     hasilSortir = langkahSelanjutnya(data);
-    // hasilSortir = hasilSortir.sort();
-    // hasilSortir = hasilSortir.reverse();
-  return hasilSortir.sort();
-
+    hasilSortir = hasilSortir.sort();
+    hasilSortir = hasilSortir.reverse();
+    return hasilSortir;
   }
 
   // return hasilSortir;
