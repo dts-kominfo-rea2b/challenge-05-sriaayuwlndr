@@ -28,12 +28,12 @@ const sorter = (data, langkahSelanjutnya) => {
 
   if(langkahSelanjutnya == sortAscending)
   {
-    langkahSelanjutnya(data.sort());
+    return langkahSelanjutnya(data.sort());
   }
 
   else if(langkahSelanjutnya == sortDescending)
   {
-    langkahSelanjutnya(data.reverse());
+    return langkahSelanjutnya(data.reverse());
   }
 
   // return resultNamaSorter;
@@ -72,43 +72,35 @@ const sorter = (data, langkahSelanjutnya) => {
 const sortAscending = (data) => {
 
   let panjangData = data.length;
-  let resultNamaSorter = [];
   let resultNamaAsc = [];
   let nama = [];
-  let urutanNomor = 0;
 
   for (let i = 0; i < panjangData; i++)
   {
       nama[i] = data[i];
-      urutanNomor += 1;
       
-      resultNamaSorter[i] = urutanNomor+" . "+nama[i];
-      // resultNamaAsc[i] = nama[i]; 
+      resultNamaAsc[i] = nama[i];
   }
 
-  console.log(resultNamaSorter);
-  // return resultNamaSorter;
+  // console.log(resultNamaAsc);
+  return resultNamaAsc;
 }
 
 const sortDescending = (data) => {
 
   let panjangData = data.length;
-  let resultNamaSorter = [];
-  let resultNamaAsc = [];
+  let resultNamaDesc = [];
   let nama = [];
-  let urutanNomor = 0;
 
   for (let i = 0; i < panjangData; i++)
   {
       nama[i] = data[i];
-      urutanNomor += 1;
       
-      resultNamaSorter[i] = urutanNomor+" . "+nama[i];
-      // resultNamaAsc[i] = nama[i]; 
+      resultNamaDesc[i] = nama[i];
   }
 
-  console.log(resultNamaSorter);
-  // return resultNamaSorter;
+  // console.log(resultNamaDesc);
+  return resultNamaDesc;
 }
 
 // console.log(sorter(names, sortAscending));
