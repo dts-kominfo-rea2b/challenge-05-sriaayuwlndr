@@ -32,7 +32,7 @@ const sorter = (data, langkahSelanjutnya) => {
     // hasilSortir = hasilSortir.reverse();
     // hasilSortir = hasilSortir.sort();
     
-  return hasilSortir.sort();
+  return hasilSortir.reverse();
 
   }
 
@@ -43,7 +43,7 @@ const sorter = (data, langkahSelanjutnya) => {
     hasilSortir = langkahSelanjutnya(data);
     // hasilSortir = hasilSortir.sort();
     // hasilSortir = hasilSortir.reverse();
-  return hasilSortir.reverse();
+  return hasilSortir.sort();
 
   }
 
