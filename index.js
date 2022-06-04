@@ -34,7 +34,7 @@ const sorter = (data, langkahSelanjutnya) => {
     hasilSortir = hasilSortir.reverse();
     hasilSortir = hasilSortir.sort();
     
-  // return resultNamaSorter;
+  return hasilSortir;
 
   }
 
@@ -44,11 +44,11 @@ const sorter = (data, langkahSelanjutnya) => {
     hasilSortir = langkahSelanjutnya(data);
     hasilSortir = hasilSortir.sort();
     hasilSortir = hasilSortir.reverse();
-  // return resultNamaSorter;
+  return hasilSortir;
 
   }
 
-  return hasilSortir;
+  // return hasilSortir;
 }
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
